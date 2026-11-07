@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171914">
+  <title>Nostalgia Library — old pages, random places</title>
+  <meta name="description" content="A random trip through archived websites and older versions of the internet.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-wrap">
+    <header class="masthead">
+      <div class="brand-block">
+        <a class="brand" href="./">NOSTALGIA LIBRARY</a>
+        <span class="brand-sub">A RANDOM WALK THROUGH THE OLD WEB</span>
+      </div>
+      <nav class="top-links">
+        <a href="#about-creator">ABOUT THE CREATOR</a>
+        <span>·</span>
+        <a href="#" id="about-link">ABOUT THE PROJECT</a>
+        <span>·</span>
+        <a href="https://web.archive.org/" target="_blank" rel="noopener">THE WAYBACK MACHINE ↗</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="welcome-strip">
+        <div>
+          <p class="tiny-label">YOU ARE VISITING</p>
+          <h1>THE INTERNET, <em>THEN.</em></h1>
+          <p class="welcome-copy">Old homepages. Forgotten corners. Familiar sites from another time.</p>
+        </div>
+        <button id="discover" class="discover-button">TAKE ME SOMEWHERE RANDOM <span>→</span></button>
+      </section>
+
+      <section class="browser" aria-label="Archived website viewer">
+        <div class="browser-titlebar">
+          <div class="traffic"><i></i><i></i><i></i></div>
+          <span>THE NOSTALGIA BROWSER</span>
+          <span class="browser-count" id="count">00 SITES IN THE BOX</span>
+        </div>
+        <div class="destination">
+          <div>
+            <div class="destination-year" id="site-era">NO DESTINATION YET</div>
+            <h2 id="site-title">Pick a random doorway.</h2>
+            <p id="site-description">You won't know where you're going until you get there.</p>
+          </div>
+          <div class="destination-actions">
+            <button id="another" class="small-button" disabled>ANOTHER RANDOM SITE</button>
+            <a id="open-tab" href="#" target="_blank" rel="noopener noreferrer" hidden>OPEN OUTSIDE ↗</a>
+          </div>
+        </div>
+        <div class="address-row">
+          <span class="address-icon">↗</span>
+          <span id="address">nostalgialibrary.fun</span>
+          <span class="archive-label">ARCHIVE COPY</span>
+        </div>
+        <div class="frame-wrap">
+          <div class="empty-state" id="empty-state">
+            <div class="empty-mark">✳</div>
+            <strong>NOTHING OPEN RIGHT NOW</strong>
+            <span>PRESS “TAKE ME SOMEWHERE RANDOM” TO BEGIN</span>
+          </div>
+          <iframe id="site-frame" title="Archived website" referrerpolicy="no-referrer" loading="lazy"></iframe>
+        </div>
+        <div class="browser-footer">
+          <span id="site-number">READY WHEN YOU ARE</span>
+          <span>ARCHIVED PAGES ARE PROVIDED BY THE INTERNET ARCHIVE</span>
+        </div>
+      </section>
+
+      <section class="bottom-note">
+        <p><b>NO SEARCH. NO MAP. NO PLAN.</b> Just one random page after another.</p>
+        <p class="small-print">Some pages may be incomplete, slow, or unavailable. If a page won't display here, try opening it outside the viewer.</p>
+      </section>
+
+      <section class="creator-section" id="about-creator">
+        <div class="creator-copy">
+          <p class="tiny-label">A LITTLE ABOUT ME</p>
+          <h2>Made by a curious kid from a small town.</h2>
+          <p>Hey, I'm Jayden I'm 13 years old, and I'm from a small town. I've been interested in computers for a long time. I used to imagine a day when you could just type something into a computer and it would create it for you. It always seemed like something from the future.</p>
+          <p>That idea is a big part of why I wanted to make this project. I used AI as a tool to help me plan and build parts of Nostalgia Library, and I used the Internet Archive's Wayback Machine to help bring old websites and pieces of internet history back to life.</p>
+          <p>I made this because I think it's interesting to see what the internet used to look like, even if you weren't around when some of these websites were popular. I hope you find something cool, strange, or nostalgic while exploring.</p>
+          <div class="creator-signoff">— JAYDEN M. <span>·</span> CREATOR OF NOSTALGIA LIBRARY</div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span>© NOSTALGIA LIBRARY</span>
+      <span>MADE FOR THE INTERNET-DREAMERS</span>
+    </footer>
+  </div>
+
+  <div class="modal-backdrop" id="welcome-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="welcome-modal">
+      <div class="modal-top"><span>READ THIS FIRST</span><button id="close-modal" aria-label="Close welcome message">×</button></div>
+      <div class="modal-content">
+        <div class="modal-star">✳</div>
+        <p class="tiny-label">WELCOME TO THE ARCHIVE</p>
+        <h2 id="modal-title">Hi. Welcome to the Nostalgia Library.</h2>
+        <p>This is a little time machine for the old internet. The library uses a curated list of websites and the Internet Archive’s Wayback Machine to find pages from years ago.</p>
+        <p>Some places in here have disappeared. Others are older versions of websites you might still use today. Every time you discover a page, the site asks the archive for a snapshot from around that site's era.</p>
+        <p class="modal-disclaimer">A little heads-up: archived pages can be broken, missing images, or blocked from showing inside this window. That is normal for old web archives. You can open a page in a new tab if needed.</p>
+        <button id="enter-library" class="enter-button">GOT IT — LET ME EXPLORE <span>→</span></button>
+      </div>
+      <div class="modal-bottom">THERE IS NO WAY TO KNOW WHAT COMES NEXT.</div>
+    </div>
+  </div>
+
+  <script src="sites.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
