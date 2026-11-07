@@ -6,15 +6,15 @@
   <meta name="theme-color" content="#171914">
   <title>Nostalgia Library — old pages, random places</title>
   <meta name="description" content="A random trip through archived websites and older versions of the internet.">
+  <link rel="icon" type="image/png" href="assets/nostalgia-library-logo.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="page-wrap">
     <header class="masthead">
-      <div class="brand-block">
-        <a class="brand" href="./">NOSTALGIA LIBRARY</a>
-        <span class="brand-sub">A RANDOM CRAWL THROUGH THE OLD WEB</span>
-      </div>
+      <a class="brand-logo-link" href="./" aria-label="Nostalgia Library home">
+        <img class="brand-logo" src="assets/nostalgia-library-logo.png" alt="Nostalgia Library — Explore, Discover, Relive">
+      </a>
       <nav class="top-links">
         <a href="#about-creator">ABOUT THE CREATOR</a>
         <span>·</span>
@@ -29,7 +29,7 @@
         <div>
           <p class="tiny-label">YOU ARE VISITING</p>
           <h1>THE INTERNET, <em>THEN.</em></h1>
-          <p class="welcome-copy">Old homepages. Forgotten corners. Familiar sites from another time.</p>
+          <p class="welcome-copy">A RANDOM CRAWL THROUGH THE OLD WEB</p>
         </div>
         <button id="discover" class="discover-button">TAKE ME SOMEWHERE RANDOM <span>→</span></button>
       </section>
@@ -105,6 +105,39 @@
         <button id="enter-library" class="enter-button">GOT IT — LET ME EXPLORE <span>→</span></button>
       </div>
       <div class="modal-bottom">THERE IS NO WAY TO KNOW WHAT COMES NEXT.</div>
+    </div>
+  </div>
+
+
+  <div class="modal-backdrop" id="adblock-modal" role="dialog" aria-modal="true" aria-labelledby="adblock-title" hidden>
+    <div class="welcome-modal">
+      <div class="modal-top"><span>ADBLOCKER DETECTED</span><button class="modal-close" data-close-modal="adblock-modal" aria-label="Close ad blocker message">×</button></div>
+      <div class="modal-content">
+        <div class="modal-star">✳</div>
+        <p class="tiny-label">A SMALL FAVOR, IF YOU DON'T MIND</p>
+        <h2 id="adblock-title">A little support goes a long way.</h2>
+        <p>Hi! I'm Jayden, the 13-year-old creator of Nostalgia Library. I built this project to preserve and share pieces of the old internet, and I use the site's ad revenue to help cover the costs of keeping it online.</p>
+        <p>If you're comfortable doing so, please consider disabling your ad blocker for Nostalgia Library. Even a small amount of ad revenue helps me maintain the site, add more archived content, and keep the project running.</p>
+        <p class="modal-disclaimer">I understand that everyone has different preferences when it comes to ads and privacy. There is no pressure — I simply appreciate you considering supporting the project.</p>
+        <button class="enter-button" data-close-modal="adblock-modal">Continue - I'll Think About It <span>→</span></button>
+      </div>
+      <div class="modal-bottom">THANK YOU FOR CHECKING OUT MY PROJECT.</div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="popup-modal" role="dialog" aria-modal="true" aria-labelledby="popup-title" hidden>
+    <div class="welcome-modal">
+      <div class="modal-top"><span>POPUP BLOCKER DETECTED</span><button class="modal-close" data-close-modal="popup-modal" aria-label="Close popup message">×</button></div>
+      <div class="modal-content">
+        <div class="modal-star">✳</div>
+        <p class="tiny-label">YOUR BROWSER BLOCKED A NEW TAB</p>
+        <h2 id="popup-title">The archive couldn't open outside this window.</h2>
+        <p>Nostalgia Library displays archived pages inside the viewer on this page. That mini viewer does not require popups, but opening a page in a separate tab does.</p>
+        <p class="modal-disclaimer">If you want to open archived pages outside the viewer, allow popups or redirects for this site in your browser settings, then try again.</p>
+        <button id="retry-popup" class="enter-button">TRY OPENING THE PAGE AGAIN <span>→</span></button>
+        <button class="continue-button" data-close-modal="popup-modal">CONTINUE IN THE LIBRARY</button>
+      </div>
+      <div class="modal-bottom">THE MINI VIEWER CAN STILL BE USED.</div>
     </div>
   </div>
 
